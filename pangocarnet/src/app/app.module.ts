@@ -12,6 +12,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import {AuthService} from "./auth.service";
+import {AuthGuard} from "./auth.guard";
 
 
 @NgModule({
@@ -31,7 +33,7 @@ import { HomeComponent } from './home/home.component';
     RouterModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AuthService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
