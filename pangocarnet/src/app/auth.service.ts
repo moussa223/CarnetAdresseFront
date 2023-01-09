@@ -9,4 +9,7 @@ export class AuthService {
   loggedIn(){
     return !!localStorage.getItem('token') // la syntaxe retourne true or false
   }
+  getToken(){
+    return localStorage.getItem('token')
+  }
 }

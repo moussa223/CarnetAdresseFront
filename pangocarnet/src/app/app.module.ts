@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { ConnexionComponent } from './connexion/connexion.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
 import {FormsModule} from "@angular/forms";
 import { ToastrService, ToastrModule, ToastrConfig } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -17,6 +17,7 @@ import {AuthGuard} from "./auth.guard";
 import { RoleComponent } from './role/role.component';
 import { AmiComponent } from './ami/ami.component';
 import { RolemodiferComponent } from './rolemodifer/rolemodifer.component';
+import {TokenInterceptorService} from "./token-interceptor.service";
 
 
 @NgModule({
@@ -39,7 +40,11 @@ import { RolemodiferComponent } from './rolemodifer/rolemodifer.component';
     RouterModule,
     FormsModule
   ],
-  providers: [AuthService,AuthGuard],
+  providers: [AuthService,AuthGuard,{
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptorService,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
