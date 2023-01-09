@@ -14,6 +14,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import {AuthService} from "./auth.service";
 import {AuthGuard} from "./auth.guard";
+import { RoleComponent } from './role/role.component';
+import { AmiComponent } from './ami/ami.component';
+import { RolemodiferComponent } from './rolemodifer/rolemodifer.component';
 
 
 @NgModule({
@@ -21,7 +24,10 @@ import {AuthGuard} from "./auth.guard";
     AppComponent,
     InscriptionComponent,
     ConnexionComponent,
-    HomeComponent
+    HomeComponent,
+    RoleComponent,
+    AmiComponent,
+    RolemodiferComponent
   ],
   imports: [
     BrowserModule,

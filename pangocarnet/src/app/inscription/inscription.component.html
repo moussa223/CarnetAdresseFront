@@ -22,11 +22,16 @@
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <input type="text" id="form3Example1" [(ngModel)]="model.role" name="name" placeholder="role du pangolin" required="required" class="form-control" />
+                      <select [(ngModel)]="model.role" name="role" required="required" class="form-control">
+                        <option value="Guerrier">Guerrier</option>
+                        <option value="Alchimiste">Alchimiste</option>
+                        <option value="Alchimiste">Sorcier</option>
+                        <option value="Alchimiste">Espions</option>
+                        <option value="Enchanteur">Enchanteur</option>
+                      </select>
                       <label class="form-label" for="form3Example1c">role</label>
                     </div>
                   </div>
-
 
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
