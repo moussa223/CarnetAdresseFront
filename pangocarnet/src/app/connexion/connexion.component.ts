@@ -21,7 +21,9 @@ export class ConnexionComponent {
           console.log(res)
           console.log('Authentification réussie');
           localStorage.setItem('token',res.token)
-          alert('BRAVO ! Connexion reussi,vous sererz rediriger vers la HOME Page ')
+          localStorage.setItem('role',res.role)
+          localStorage.setItem('login',res.login)
+          //alert('BRAVO ! Connexion reussi,vous sererz rediriger vers la HOME Page ')
           this.router.navigate(['/home']);
         }
       },

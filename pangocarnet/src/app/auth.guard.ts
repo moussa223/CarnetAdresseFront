@@ -13,7 +13,7 @@ export class AuthGuard implements CanActivate {
     if(this._authservice.loggedIn()){
       return true
     }else {
-      alert('Veuillez Vous connecter pour accéder à cette page !')
+      //alert('Veuillez Vous connecter pour accéder à cette page !')
       console.log('Veuillez Vous connecter pour accéder à cette page !')
       this._router.navigate(['/login'])
       return false
