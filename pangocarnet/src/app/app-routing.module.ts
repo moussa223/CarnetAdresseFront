@@ -7,6 +7,7 @@ import {AuthGuard} from "./auth.guard";
 import {RoleComponent} from "./role/role.component";
 import {AmiComponent} from "./ami/ami.component";
 import {RolemodiferComponent} from "./rolemodifer/rolemodifer.component";
+import {MalisteamiComponent} from "./malisteami/malisteami.component";
 
 const routes: Routes = [{path: '', component: InscriptionComponent },
   { path: 'login', component: ConnexionComponent },
@@ -14,7 +15,8 @@ const routes: Routes = [{path: '', component: InscriptionComponent },
   // en verifiant si le token est présent dans le local storage
   ,{ path: 'role', component: RoleComponent,canActivate:[AuthGuard] },
   { path: 'UpdateRole', component: RolemodiferComponent,canActivate:[AuthGuard] },
-  { path: 'ami', component: AmiComponent,canActivate:[AuthGuard] }
+  { path: 'ami', component: AmiComponent,canActivate:[AuthGuard] },
+  { path: 'mesamis', component: MalisteamiComponent,canActivate:[AuthGuard] }
 ];
 
 @NgModule({

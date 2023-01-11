@@ -15,7 +15,7 @@ export class InscriptionComponent {
     name: '',
     login: '',
     role:'',
-    ami:'',
+    ami:[],
     password: '',
   };
   constructor(private http:HttpClient,private toastr: ToastrService,private router: Router) {}

@@ -1,8 +1,5 @@
-<header>
-  <h3 style="display: flex; justify-content: center; align-items: center;margin-right: 10px">Bienvenu sur la homepage </h3>
-  <div
-    class="p-5 text-center bg-image"
-    style="
+
+<header style="
       background-image: url('https://th.bing.com/th/id/OIP.lzq8HSJVGoqwwNrlnPfL8QHaFz?w=240&h=187&c=7&r=0&o=5&pid=1.7');
       background-repeat: no-repeat;
       background-position: center;
@@ -10,23 +7,37 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
-
-    "
-  >
-    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6); height: 130px" >
-      <div class="d-flex justify-content-center align-items-center h-100">
-        <div class="text-white">
-          <div class="row">
-            <div class="col-4">
-              <p class="mb-3" style="font-size: 20px"><a role="button" style="color: whitesmoke" routerLink="/role">Afficher mon role</a></p>
-            </div>
-            <div class="col-4"><p class="mb-3" style="font-size: 20px"><a routerLink="/UpdateRole" style="color: whitesmoke" role="button">Modifier mon role</a></p></div>
-            <div class="col-4"><p class="mb-3" style="font-size: 20px"><a role="button" style="color: whitesmoke" routerLink="/ami">Ajouter un Ami</a></p></div>
-            <a style="margin-top: 20px" class="btn btn-danger btn-lg btn-block" routerLink="/login" (click)="ClearLocalStorageToken()" role="button">Se deconnecter</a>
-          </div>
-        </div>
+      height: 100%; ">
+  <div class="jumbotron jumbotron-fluid text-center bg-image" >
+    <div class="container">
+      <h1 class="display-4">Bienvenue sur la homepage</h1>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3">
+        <p class="mb-3">
+          <a class="btn btn-primary" href="/role">Afficher mon role</a>
+        </p>
       </div>
+      <div class="col-sm-3">
+        <p class="mb-3">
+          <a class="btn btn-primary" href="/UpdateRole">Modifier mon role</a>
+        </p>
+      </div>
+      <div class="col-sm-3">
+        <p class="mb-3">
+          <a class="btn btn-primary" href="/ami">Ajouter un Ami</a>
+        </p>
+      </div>
+      <div class="col-sm-3">
+        <p class="mb-3">
+          <a class="btn btn-primary" href="/mesamis">Voir mes amis</a>
+        </p>
+      </div>
+    </div>
+    <div class="text-center mt-3">
+      <a class="btn btn-danger" href="/login" (click)="ClearLocalStorageToken()">Se déconnecter</a>
     </div>
   </div>
 </header>

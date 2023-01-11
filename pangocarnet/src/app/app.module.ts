@@ -18,6 +18,7 @@ import { RoleComponent } from './role/role.component';
 import { AmiComponent } from './ami/ami.component';
 import { RolemodiferComponent } from './rolemodifer/rolemodifer.component';
 import {TokenInterceptorService} from "./token-interceptor.service";
+import { MalisteamiComponent } from './malisteami/malisteami.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import {TokenInterceptorService} from "./token-interceptor.service";
     HomeComponent,
     RoleComponent,
     AmiComponent,
-    RolemodiferComponent
+    RolemodiferComponent,
+    MalisteamiComponent
   ],
   imports: [
     BrowserModule,
