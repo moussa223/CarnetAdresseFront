@@ -2,9 +2,9 @@
   <div  class="col-6">
     <h4>Liste des pangolins inscrits:</h4>
     <ul class="list-group">
-      <li class="list-group-item list-group-item-action bg-light" >
-        <button class="btn btn-danger mr-2" >- supprimer de ma liste d'ami</button>
-        nom du pangolin: <b>test</b> role: <b>test</b>
+      <li *ngFor="let pangoli of amiArray" class="list-group-item list-group-item-action bg-light" >
+        <button (click)="deleteFriend(pangolinlogin,pangoli)" class="btn btn-danger mr-2" >- supprimer de ma liste d'ami</button>
+        nom du pangolin: <b>{{pangoli}}</b>
       </li>
     </ul>
   </div>

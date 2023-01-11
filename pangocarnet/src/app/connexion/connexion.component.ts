@@ -23,6 +23,7 @@ export class ConnexionComponent {
           localStorage.setItem('token',res.token)
           localStorage.setItem('role',res.role)
           localStorage.setItem('login',res.login)
+          localStorage.setItem('ami',res.ami)
           //alert('BRAVO ! Connexion reussi,vous sererz rediriger vers la HOME Page ')
           this.router.navigate(['/home']);
         }

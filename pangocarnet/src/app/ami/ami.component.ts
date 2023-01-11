@@ -27,6 +27,10 @@ export class AmiComponent implements OnInit{
   addFriend(login:string,amiLogin:string){
       this.amiService.addFriend(this.pangolinlogin,amiLogin).subscribe(response=>{
         console.log(response)
+        localStorage.clear()
+        alert('Ami ajouté, Veuillez vous reconnecter pour voir vos amis')
+        this.router.navigate(['/login'])
       })
+
   }
 }

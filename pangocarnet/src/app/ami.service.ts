@@ -12,4 +12,8 @@ export class AmiService {
     this.pangolinlogin = localStorage.getItem('login')
     return this.http.put('http://localhost:3000/addfriend/'+this.pangolinlogin+'/'+amiLogin,{amiLogin});
   }
+  DeleteFriend(login:string,amiLogin:string){
+    this.pangolinlogin = localStorage.getItem('login')
+    return this.http.delete('http://localhost:3000/Deletefriend/'+this.pangolinlogin+'/'+amiLogin,{});
+  }
 }
